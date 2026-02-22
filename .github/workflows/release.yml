@@ -1,0 +1,64 @@
+name: Release (Windows EXE)
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyinstaller
+
+      - name: Build EXE
+        run: |
+          pyinstaller --noconfirm --clean --onefile --name viola `
+            --paths ".\viola\src" `
+            ".\viola\src\viola\__main__.py"
+
+      - name: Prepare bundle
+        shell: pwsh
+        run: |
+          $tag = "${{ github.ref_name }}"
+          $bundle = "viola-$tag-windows"
+          New-Item -ItemType Directory -Force $bundle | Out-Null
+
+          Copy-Item ".\dist\viola.exe" $bundle -Force
+          if (Test-Path ".\README.md") { Copy-Item ".\README.md" $bundle -Force }
+          if (Test-Path ".\CHANGELOG.md") { Copy-Item ".\CHANGELOG.md" $bundle -Force }
+          if (Test-Path ".\LICENSE") { Copy-Item ".\LICENSE" $bundle -Force }
+
+          @"
+          ## Run (Windows)
+          .\viola.exe --text "انا قلقان" --plain
+          .\viola.exe --report --days 7
+          .\viola.exe --plan --days 7
+          .\viola.exe --checkin --mood 60 --note "اختبار"
+          "@ | Set-Content -Encoding UTF8 (Join-Path $bundle "RUN.md")
+
+          Compress-Archive -Path $bundle -DestinationPath "$bundle.zip" -Force
+
+      - name: Create GitHub Release + Upload Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/viola.exe
+            viola-${{ github.ref_name }}-windows.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
