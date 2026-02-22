@@ -1,4 +1,4 @@
-name: Release (Windows EXE)
+name: Release (Multi-Platform)
 
 on:
   push:
@@ -9,15 +9,55 @@ permissions:
   contents: write
 
 jobs:
+  notes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build release notes from CHANGELOG
+        shell: bash
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          echo "# Release ${TAG}" > RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+
+          if [ -f CHANGELOG.md ]; then
+            # Try matching "## x.y.z" (without v) or "## vX.Y.Z"
+            VER="${TAG#v}"
+            awk -v ver="$VER" -v tag="$TAG" '
+              BEGIN{found=0}
+              $0 ~ "^##[[:space:]]+"ver"([[:space:]]|$)" {found=1}
+              $0 ~ "^##[[:space:]]+"tag"([[:space:]]|$)" {found=1}
+              found{print}
+              found && $0 ~ "^##[[:space:]]+" && $0 !~ "^##[[:space:]]+"ver && $0 !~ "^##[[:space:]]+"tag {exit}
+            ' CHANGELOG.md >> RELEASE_NOTES.md
+
+            # If awk found nothing useful, add fallback
+            if [ "$(wc -l < RELEASE_NOTES.md)" -le 3 ]; then
+              echo "## Notes" >> RELEASE_NOTES.md
+              echo "" >> RELEASE_NOTES.md
+              echo "- Release built from tag ${TAG}." >> RELEASE_NOTES.md
+              echo "- (No matching section found in CHANGELOG.md)" >> RELEASE_NOTES.md
+            fi
+          else
+            echo "## Notes" >> RELEASE_NOTES.md
+            echo "" >> RELEASE_NOTES.md
+            echo "- Release built from tag ${TAG}." >> RELEASE_NOTES.md
+            echo "- (CHANGELOG.md not found)" >> RELEASE_NOTES.md
+          fi
+
+      - name: Upload notes artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-notes
+          path: RELEASE_NOTES.md
+
   build-windows:
     runs-on: windows-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
@@ -27,7 +67,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install pyinstaller
 
-      - name: Build EXE
+      - name: Build EXE (Windows)
         shell: pwsh
         run: |
           pyinstaller --noconfirm --clean --onefile --name viola `
@@ -56,51 +96,142 @@ jobs:
 
           Compress-Archive -Path $bundle -DestinationPath "$bundle.zip" -Force
 
-      - name: Build release notes from CHANGELOG
-        shell: pwsh
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-assets
+          path: |
+            dist/viola.exe
+            viola-${{ github.ref_name }}-windows.zip
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build tools
         run: |
-          $tag = "${{ github.ref_name }}"
-          $notes = @()
-          $notes += "# Release $tag"
-          $notes += ""
+          python -m pip install --upgrade pip
+          python -m pip install pyinstaller
 
-          if (Test-Path ".\CHANGELOG.md") {
-            $txt = Get-Content ".\CHANGELOG.md" -Raw
-            # Try to extract section starting at "## <version>" until next "## "
-            $pattern = "(?ms)^##\s+$([regex]::Escape($tag.TrimStart('v')))\b.*?(?=^##\s+|\z)"
-            # Also support "## vX.Y.Z" style just in case
-            $pattern2 = "(?ms)^##\s+$([regex]::Escape($tag))\b.*?(?=^##\s+|\z)"
+      - name: Build (Linux)
+        run: |
+          pyinstaller --noconfirm --clean --onefile --name viola \
+            --paths "./viola/src" \
+            "./viola/src/viola/__main__.py"
 
-            $m = [regex]::Match($txt, $pattern)
-            if (-not $m.Success) { $m = [regex]::Match($txt, $pattern2) }
+      - name: Prepare bundle
+        shell: bash
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          BUNDLE="viola-${TAG}-linux"
+          mkdir -p "${BUNDLE}"
 
-            if ($m.Success) {
-              $notes += "## Changelog"
-              $notes += ""
-              $notes += $m.Value.Trim()
-            } else {
-              $notes += "## Notes"
-              $notes += ""
-              $notes += "- Release built from tag $tag."
-              $notes += "- (No matching section found in CHANGELOG.md)"
-            }
-          } else {
-            $notes += "## Notes"
-            $notes += ""
-            $notes += "- Release built from tag $tag."
-            $notes += "- (CHANGELOG.md not found)"
-          }
+          cp "./dist/viola" "${BUNDLE}/viola"
+          chmod +x "${BUNDLE}/viola"
 
-          $notesText = ($notes -join "`r`n")
-          Set-Content -Encoding UTF8 "RELEASE_NOTES.md" $notesText
+          [ -f README.md ] && cp README.md "${BUNDLE}/"
+          [ -f CHANGELOG.md ] && cp CHANGELOG.md "${BUNDLE}/"
+          [ -f LICENSE ] && cp LICENSE "${BUNDLE}/"
+
+          cat > "${BUNDLE}/RUN.md" << 'EOF'
+          ## Run (Linux)
+          ./viola --text "انا قلقان" --plain
+          ./viola --report --days 7
+          ./viola --plan --days 7
+          ./viola --checkin --mood 60 --note "اختبار"
+          EOF
+
+          zip -r "${BUNDLE}.zip" "${BUNDLE}"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-assets
+          path: |
+            dist/viola
+            viola-${{ github.ref_name }}-linux.zip
+
+  build-macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyinstaller
+
+      - name: Build (macOS)
+        run: |
+          pyinstaller --noconfirm --clean --onefile --name viola \
+            --paths "./viola/src" \
+            "./viola/src/viola/__main__.py"
+
+      - name: Prepare bundle
+        shell: bash
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          BUNDLE="viola-${TAG}-macos"
+          mkdir -p "${BUNDLE}"
+
+          cp "./dist/viola" "${BUNDLE}/viola"
+          chmod +x "${BUNDLE}/viola"
+
+          [ -f README.md ] && cp README.md "${BUNDLE}/"
+          [ -f CHANGELOG.md ] && cp CHANGELOG.md "${BUNDLE}/"
+          [ -f LICENSE ] && cp LICENSE "${BUNDLE}/"
+
+          cat > "${BUNDLE}/RUN.md" << 'EOF'
+          ## Run (macOS)
+          ./viola --text "انا قلقان" --plain
+          ./viola --report --days 7
+          ./viola --plan --days 7
+          ./viola --checkin --mood 60 --note "اختبار"
+          EOF
+
+          ditto -c -k --sequesterRsrc --keepParent "${BUNDLE}" "${BUNDLE}.zip"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-assets
+          path: |
+            dist/viola
+            viola-${{ github.ref_name }}-macos.zip
+
+  release:
+    needs: [notes, build-windows, build-linux, build-macos]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: List artifacts
+        run: |
+          ls -R artifacts
 
       - name: Create GitHub Release + Upload Assets
         uses: softprops/action-gh-release@v2
         with:
           name: ${{ github.ref_name }}
-          body_path: RELEASE_NOTES.md
+          body_path: artifacts/release-notes/RELEASE_NOTES.md
           files: |
-            dist/viola.exe
-            viola-${{ github.ref_name }}-windows.zip
+            artifacts/windows-assets/viola-${{ github.ref_name }}-windows.zip
+            artifacts/windows-assets/dist/viola.exe
+            artifacts/linux-assets/viola-${{ github.ref_name }}-linux.zip
+            artifacts/linux-assets/dist/viola
+            artifacts/macos-assets/viola-${{ github.ref_name }}-macos.zip
+            artifacts/macos-assets/dist/viola
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
