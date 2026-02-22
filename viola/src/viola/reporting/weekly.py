@@ -1,10 +1,9 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Any, Dict, List, Tuple, Optional
+from typing import Any, Dict, List, Tuple
 
 from viola.memory.store import MemoryStore
-
+from viola.formatting.labels import emo_ar, dist_ar
 
 _RLM = "\u200F"
 
@@ -20,8 +19,9 @@ def _top_k(counter: Dict[str, int], k: int = 3) -> List[Tuple[str, int]]:
 def _trend(sev: List[int]) -> str:
     if len(sev) < 2:
         return "غير كافي"
-    first = sum(sev[: max(1, len(sev)//3)]) / float(max(1, len(sev)//3))
-    last = sum(sev[-max(1, len(sev)//3):]) / float(max(1, len(sev)//3))
+    third = max(1, len(sev) // 3)
+    first = sum(sev[:third]) / float(third)
+    last = sum(sev[-third:]) / float(third)
     if last > first + 5:
         return "🔺 بيزيد"
     if last < first - 5:
@@ -34,8 +34,15 @@ def build_weekly_report(user_id: str = "default", days: int = 7) -> Dict[str, An
     events = store.get_events_since_days(user_id=user_id, days=days)
     summary_all = store.get_summary(user_id=user_id)
 
-    sev_list: List[int] = [e.get("severity") for e in events if isinstance(e.get("severity"), int)]
-    avg_sev = round(sum(sev_list) / float(len(sev_list)), 1) if sev_list else 0.0
+    # Severity lists
+    sev_all: List[int] = [e.get("severity") for e in events if isinstance(e.get("severity"), int)]
+    sev_non_crisis: List[int] = [
+        e.get("severity") for e in events
+        if isinstance(e.get("severity"), int) and (e.get("crisis_flag") is not True)
+    ]
+
+    avg_all = round(sum(sev_all) / float(len(sev_all)), 1) if sev_all else 0.0
+    avg_non_crisis = round(sum(sev_non_crisis) / float(len(sev_non_crisis)), 1) if sev_non_crisis else 0.0
 
     emo_counts: Dict[str, int] = {}
     dist_counts: Dict[str, int] = {}
@@ -58,19 +65,20 @@ def build_weekly_report(user_id: str = "default", days: int = 7) -> Dict[str, An
         "user_id": user_id,
         "days": days,
         "events_in_range": len(events),
-        "avg_severity_in_range": avg_sev,
-        "severity_trend": _trend(sev_list),
+        "avg_severity_in_range": avg_all,
+        "avg_severity_excluding_crisis": avg_non_crisis,
+        "severity_trend": _trend(sev_all),
+        "severity_trend_excluding_crisis": _trend(sev_non_crisis),
         "top_emotions_in_range": _top_k(emo_counts, 3),
         "top_distortions_in_range": _top_k(dist_counts, 3),
         "crisis_count_in_range": crisis_count,
         "overall_summary": summary_all,
     }
 
-    # Recommendation (very simple v1)
     rec: List[str] = []
     top_dist = report["top_distortions_in_range"][0][0] if report["top_distortions_in_range"] else None
     if top_dist == "overgeneralization":
-        rec.append("ركّز الأسبوع الجاي على تحويل (دايمًا/أبدًا) لـ (أحيانًا) + اكتب استثناءين يوميًا.")
+        rec.append("ركّز على تحويل (دايمًا/أبدًا) لـ (أحيانًا) + اكتب استثناءين يوميًا.")
     elif top_dist == "fortune_telling":
         rec.append("اكتب دليلين مع/ضد توقعك، وخد خطوة صغيرة يوميًا تزود فرص النتيجة الأحسن.")
     elif top_dist == "catastrophizing":
@@ -81,7 +89,7 @@ def build_weekly_report(user_id: str = "default", days: int = 7) -> Dict[str, An
         rec.append("حوّل الألقاب لوصف سلوك محدد: بدل 'أنا فاشل' -> 'أنا اتأخرت في X'.")
 
     if not rec:
-        rec.append("اختار تمرين CBT واحد كل يوم (5 دقايق) + سؤال تفكيك واحد بس. الاستمرارية أهم من الكمال.")
+        rec.append("اختار تمرين CBT واحد يوميًا (5-10 دقايق) + سؤال تفكيك واحد بس. الاستمرارية أهم من الكمال.")
 
     report["recommendations"] = rec
     return report
@@ -94,8 +102,10 @@ def format_weekly_report(report: Dict[str, Any]) -> str:
     lines.append(f"• المستخدم: {report.get('user_id')}")
     lines.append(f"• الفترة: آخر {report.get('days')} يوم")
     lines.append(f"• عدد الرسائل في الفترة: {report.get('events_in_range')}")
-    lines.append(f"• متوسط الشدة في الفترة: {report.get('avg_severity_in_range')}")
-    lines.append(f"• اتجاه الشدة: {report.get('severity_trend')}")
+    lines.append(f"• متوسط الشدة (الكل): {report.get('avg_severity_in_range')}")
+    lines.append(f"• متوسط الشدة (بدون الأزمات): {report.get('avg_severity_excluding_crisis')}")
+    lines.append(f"• اتجاه الشدة (الكل): {report.get('severity_trend')}")
+    lines.append(f"• اتجاه الشدة (بدون الأزمات): {report.get('severity_trend_excluding_crisis')}")
     lines.append(f"• مرات تفعيل وضع الأمان في الفترة: {report.get('crisis_count_in_range')}")
     lines.append("")
 
@@ -103,7 +113,7 @@ def format_weekly_report(report: Dict[str, Any]) -> str:
     lines.append("🙂 أكثر المشاعر تكرارًا (في الفترة):")
     if top_emo:
         for name, cnt in top_emo:
-            lines.append(f"- {name}: {cnt}")
+            lines.append(f"- {emo_ar(name)}: {cnt}")
     else:
         lines.append("- لا يوجد بيانات كافية")
 
@@ -112,7 +122,7 @@ def format_weekly_report(report: Dict[str, Any]) -> str:
     lines.append("🧠 أكثر التشوهات تكرارًا (في الفترة):")
     if top_dist:
         for name, cnt in top_dist:
-            lines.append(f"- {name}: {cnt}")
+            lines.append(f"- {dist_ar(name)}: {cnt}")
     else:
         lines.append("- لا يوجد بيانات كافية")
 
@@ -121,15 +131,14 @@ def format_weekly_report(report: Dict[str, Any]) -> str:
     for r in (report.get("recommendations") or []):
         lines.append(f"- {r}")
 
-    # Overall snapshot (very short)
     overall = report.get("overall_summary", {}) or {}
     lines.append("")
     lines.append("📌 لقطة عامة (كل البيانات):")
     lines.append(f"- إجمالي الرسائل: {overall.get('total_messages')}")
     lines.append(f"- متوسط الشدة العام: {round(float(overall.get('avg_severity', 0.0)), 1)}")
     if overall.get("top_emotion_overall"):
-        lines.append(f"- أكتر شعور عام: {overall.get('top_emotion_overall')}")
+        lines.append(f"- أكتر شعور عام: {emo_ar(overall.get('top_emotion_overall'))}")
     if overall.get("top_distortion_overall"):
-        lines.append(f"- أكتر تشوه عام: {overall.get('top_distortion_overall')}")
+        lines.append(f"- أكتر تشوه عام: {dist_ar(overall.get('top_distortion_overall'))}")
 
     return _rtl("\n".join(lines))

@@ -1,0 +1,10 @@
+{
+  "id": "case_001_anxiety_focus",
+  "input_text": "انا قلقان ومش قادر أركز",
+  "expect": {
+    "language": "ar",
+    "contains_any": ["تمرين", "تنفس", "أفكار", "قلق"],
+    "not_contains_any": ["ERROR", "Traceback"],
+    "max_chars": 4000
+  }
+}

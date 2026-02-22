@@ -1,0 +1,17 @@
+{
+  "id": "case_002_anger_trigger",
+  "input_text": "انا متعصب جدا وعايز اكسر كل حاجه",
+  "expect": {
+    "output_type": "dict",
+    "must_have_paths": ["mode", "analysis.severity", "analysis.emotions", "analysis.crisis_flag", "analysis.metadata.engine", "plan.notes", "memory_summary.total_messages"],
+    "equals": {
+      "mode": "cbt",
+      "analysis.metadata.engine": "rules_v1",
+      "analysis.crisis_flag": false
+    },
+    "severity_min": 12,
+    "severity_max": 30,
+    "emotion_any_of": ["anger"],
+    "not_contains_any": ["Traceback", "NameError"]
+  }
+}

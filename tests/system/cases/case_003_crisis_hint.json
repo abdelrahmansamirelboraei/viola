@@ -1,0 +1,16 @@
+{
+  "id": "case_003_crisis_hint",
+  "input_text": "مش شايف فايدة من الحياة ومش قادر اكمل",
+  "expect": {
+    "output_type": "dict",
+    "must_have_paths": ["mode", "analysis.severity", "analysis.crisis_flag", "analysis.metadata.engine", "plan.notes", "memory_summary.total_messages"],
+    "equals": {
+      "mode": "cbt",
+      "analysis.metadata.engine": "rules_v1",
+      "analysis.crisis_flag": false
+    },
+    "severity_min": 1,
+    "severity_max": 20,
+    "not_contains_any": ["Traceback", "NameError"]
+  }
+}

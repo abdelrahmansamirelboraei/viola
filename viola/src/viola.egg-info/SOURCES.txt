@@ -39,6 +39,7 @@ viola/src/viola/domain/models.py
 viola/src/viola/domain/safety.py
 viola/src/viola/exporters/html_exporter.py
 viola/src/viola/formatting/arabic_formatter.py
+viola/src/viola/formatting/labels.py
 viola/src/viola/growth/checkin.py
 viola/src/viola/growth/planner.py
 viola/src/viola/growth/templates.py

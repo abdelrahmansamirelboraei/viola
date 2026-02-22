@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Viola - CBT Assistant</title>
+<style>
+  body { background:#111; color:#eee; font-family: Arial, sans-serif; padding:40px; }
+  h1 { margin: 0 0 20px; }
+  textarea { width: 70%; height: 140px; background:#222; color:#fff; border:1px solid #8a2be2; padding:12px; border-radius:10px; }
+  button { margin-top: 12px; padding:10px 18px; background:#8a2be2; color:white; border:none; border-radius:10px; cursor:pointer; }
+  button:hover { opacity:0.9; }
+  pre { margin-top: 22px; background:#1b1b1b; padding:14px; border-radius:12px; overflow:auto; }
+</style>
+</head>
+<body>
+  <h1>Viola CBT Web</h1>
+
+  <textarea id="inputText" placeholder="اكتب مشكلتك هنا..."></textarea><br>
+  <button onclick="analyze()">تحليل</button>
+
+  <pre id="output"></pre>
+
+<script>
+async function analyze(){
+  const text = document.getElementById("inputText").value;
+
+  const res = await fetch("/api/analyze", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({text})
+  });
+
+  const data = await res.json();
+  document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+}
+</script>
+</body>
+</html>

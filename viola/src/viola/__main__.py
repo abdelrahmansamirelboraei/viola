@@ -6,7 +6,26 @@ import sys
 from viola.adapters.io.cli import run_cli, run_report, run_plan, run_daily_checkin
 
 
+def _pause_if_double_click(argv: list[str]) -> None:
+    # If user runs the EXE by double-click, argv is typically empty -> show help + pause.
+    if len(argv) == 0:
+        print("Viola CLI")
+        print("")
+        print("Looks like you opened Viola by double-click.")
+        print("Run it from PowerShell like:")
+        print(r'  .\viola.exe --text "انا قلقان" --plain')
+        print(r'  .\viola.exe --report --days 7')
+        print(r'  .\viola.exe --plan --days 7')
+        print(r'  .\viola.exe --checkin --mood 60 --note "اختبار"')
+        print("")
+        input("Press Enter to close...")
+        raise SystemExit(0)
+
+
 def main(argv: list[str] | None = None) -> int:
+    argv = argv if argv is not None else sys.argv[1:]
+    _pause_if_double_click(argv)
+
     parser = argparse.ArgumentParser(prog="viola", description="Viola: Arabic CBT assistant (CLI)")
 
     mode = parser.add_mutually_exclusive_group(required=True)
