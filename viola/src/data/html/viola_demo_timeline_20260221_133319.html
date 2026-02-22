@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<title>Viola (CBT) — demo_timeline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+:root {
+  --bg:#0b0b10;
+  --card:rgba(255,255,255,0.05);
+  --border:rgba(255,255,255,0.12);
+  --text:#f2f2f2;
+  --muted:rgba(242,242,242,0.70);
+  --accent:#a855f7;
+}
+body {
+  background:var(--bg);
+  color:var(--text);
+  font-family:Segoe UI,Tahoma,Arial;
+  margin:30px;
+  line-height:1.9;
+}
+.wrap { max-width: 980px; margin: 0 auto; }
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:12px;
+  margin-bottom:18px;
+}
+.h1 {
+  font-size:22px;
+  font-weight:900;
+}
+.h1 .accent { color: var(--accent); }
+.meta {
+  color:var(--muted);
+  font-size:13px;
+  direction:ltr;
+  text-align:left;
+}
+.card {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:14px;
+}
+.turn {
+  padding:0;
+}
+.turn > summary {
+  list-style:none;
+  cursor:pointer;
+  padding:18px;
+  border-radius:18px;
+}
+.turn[open] > summary {
+  border-bottom:1px solid var(--border);
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+}
+.turn > summary::-webkit-details-marker { display:none; }
+
+.turn_head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+.turn_title {
+  font-weight:900;
+}
+.turn_meta {
+  direction:ltr;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.section {
+  padding:18px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  padding:0 18px 18px 18px;
+}
+@media (max-width:800px) {
+  .grid { grid-template-columns:1fr; }
+}
+.mini {
+  background:rgba(255,255,255,0.04);
+  padding:14px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.10);
+}
+.label {
+  font-weight:800;
+  margin-bottom:6px;
+}
+.badge {
+  display:inline-block;
+  padding:5px 10px;
+  margin:4px 6px 0 0;
+  border-radius:999px;
+  background:rgba(168,85,247,0.15);
+  border:1px solid rgba(255,255,255,0.10);
+  font-size:13px;
+}
+pre {
+  white-space:pre-wrap;
+  margin:0;
+}
+.divider {
+  height:1px;
+  background:rgba(255,255,255,0.10);
+  margin:10px 0;
+}
+.muted { color: var(--muted); }
+
+.pill {
+  display:inline-block;
+  padding:10px 12px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid var(--border);
+}
+
+.anim {
+  opacity:0;
+  transform: translateY(8px);
+  animation: fadeUp .35s ease forwards;
+}
+.anim:nth-of-type(1) { animation-delay: .02s; }
+.anim:nth-of-type(2) { animation-delay: .05s; }
+.anim:nth-of-type(3) { animation-delay: .08s; }
+.anim:nth-of-type(4) { animation-delay: .11s; }
+.anim:nth-of-type(5) { animation-delay: .14s; }
+@keyframes fadeUp {
+  to {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="h1">Viola <span class="accent">CBT</span> — Timeline</div>
+    <div class="meta">
+      <div><span class="muted">Session:</span> demo_timeline</div>
+      <div><span class="muted">Created:</span> 21 Feb 2026 — 11:33 UTC</div>
+      <div><span class="muted">Updated:</span> 21 Feb 2026 — 11:33 UTC</div>
+      <div><span class="muted">Turns:</span> 6</div>
+    </div>
+  </div>
+
+  
+    <details class="turn card anim" open>
+      <summary class="turn_head">
+        <div class="turn_title">الدور 6</div>
+        <div class="turn_meta">🕒 21 Feb 2026 — 11:33 UTC</div>
+      </summary>
+
+      <div class="section">
+        <div class="label">💬 إدخال المستخدم</div>
+        <pre>open timeline</pre>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">📌 تلخيص</div>
+          <pre>open timeline</pre>
+        </div>
+
+        <div class="mini">
+          <div class="label">🧠 الفكرة التلقائية</div>
+          <pre>قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).</pre>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">⚠️ تشوهات معرفية</div>
+          <p class="muted">—</p>
+          <div class="divider"></div>
+          <div class="label">❤️ مشاعر</div>
+          <span class="badge">sadness (0.00)</span><span class="badge">anxiety (0.00)</span><span class="badge">anger (0.00)</span><span class="badge">stress (0.00)</span>
+        </div>
+
+        <div class="mini">
+          <div class="label">❓ أسئلة سوكراتية</div>
+          <ul><li>ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟</li><li>لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟</li><li>هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟</li></ul>
+          <div class="divider"></div>
+          <div class="label">🚀 خطوة عملية</div>
+          <pre>اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.</pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="label">🟣 رد Viola</div>
+        <pre>🟣 Viola (CBT دعم ذاتي)
+
+**تلخيص سريع:**
+- open timeline
+
+**الفكرة التلقائية المحتملة:**
+- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).
+
+**تشوهات معرفية محتملة (مؤشرات):**
+- غير محدد (محتاج تفاصيل أكثر)
+
+**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**
+- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟
+- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟
+- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟
+
+**خطوة عملية صغيرة الآن:**
+- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.
+
+⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care.</pre>
+      </div>
+    </details>
+    
+    <details class="turn card anim">
+      <summary class="turn_head">
+        <div class="turn_title">الدور 5</div>
+        <div class="turn_meta">🕒 21 Feb 2026 — 11:33 UTC</div>
+      </summary>
+
+      <div class="section">
+        <div class="label">💬 إدخال المستخدم</div>
+        <pre>بعد 10 دقايق: بدأت وخلصت أول نقطة، بس لسه في توتر.</pre>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">📌 تلخيص</div>
+          <pre>بعد 10 دقايق: بدأت وخلصت أول نقطة، بس لسه في توتر.</pre>
+        </div>
+
+        <div class="mini">
+          <div class="label">🧠 الفكرة التلقائية</div>
+          <pre>قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).</pre>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">⚠️ تشوهات معرفية</div>
+          <p class="muted">—</p>
+          <div class="divider"></div>
+          <div class="label">❤️ مشاعر</div>
+          <span class="badge">sadness (0.00)</span><span class="badge">anxiety (0.10)</span><span class="badge">anger (0.00)</span><span class="badge">stress (0.00)</span>
+        </div>
+
+        <div class="mini">
+          <div class="label">❓ أسئلة سوكراتية</div>
+          <ul><li>ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟</li><li>لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟</li><li>هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟</li></ul>
+          <div class="divider"></div>
+          <div class="label">🚀 خطوة عملية</div>
+          <pre>اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.</pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="label">🟣 رد Viola</div>
+        <pre>🟣 Viola (CBT دعم ذاتي)
+
+**تلخيص سريع:**
+- بعد 10 دقايق: بدأت وخلصت أول نقطة، بس لسه في توتر.
+
+**الفكرة التلقائية المحتملة:**
+- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).
+
+**تشوهات معرفية محتملة (مؤشرات):**
+- غير محدد (محتاج تفاصيل أكثر)
+
+**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**
+- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟
+- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟
+- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟
+
+**خطوة عملية صغيرة الآن:**
+- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.
+
+⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care.</pre>
+      </div>
+    </details>
+    
+    <details class="turn card anim">
+      <summary class="turn_head">
+        <div class="turn_title">الدور 4</div>
+        <div class="turn_meta">🕒 21 Feb 2026 — 11:33 UTC</div>
+      </summary>
+
+      <div class="section">
+        <div class="label">💬 إدخال المستخدم</div>
+        <pre>دلوقتي عايز خطة صغيرة: هبدأ 10 دقايق بس وأكتب 3 نقاط مطلوبين.</pre>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">📌 تلخيص</div>
+          <pre>دلوقتي عايز خطة صغيرة: هبدأ 10 دقايق بس وأكتب 3 نقاط مطلوبين.</pre>
+        </div>
+
+        <div class="mini">
+          <div class="label">🧠 الفكرة التلقائية</div>
+          <pre>قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).</pre>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">⚠️ تشوهات معرفية</div>
+          <p class="muted">—</p>
+          <div class="divider"></div>
+          <div class="label">❤️ مشاعر</div>
+          <span class="badge">sadness (0.00)</span><span class="badge">anxiety (0.00)</span><span class="badge">anger (0.00)</span><span class="badge">stress (0.00)</span>
+        </div>
+
+        <div class="mini">
+          <div class="label">❓ أسئلة سوكراتية</div>
+          <ul><li>ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟</li><li>لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟</li><li>هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟</li></ul>
+          <div class="divider"></div>
+          <div class="label">🚀 خطوة عملية</div>
+          <pre>اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.</pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="label">🟣 رد Viola</div>
+        <pre>🟣 Viola (CBT دعم ذاتي)
+
+**تلخيص سريع:**
+- دلوقتي عايز خطة صغيرة: هبدأ 10 دقايق بس وأكتب 3 نقاط مطلوبين.
+
+**الفكرة التلقائية المحتملة:**
+- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).
+
+**تشوهات معرفية محتملة (مؤشرات):**
+- غير محدد (محتاج تفاصيل أكثر)
+
+**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**
+- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟
+- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟
+- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟
+
+**خطوة عملية صغيرة الآن:**
+- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.
+
+⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care.</pre>
+      </div>
+    </details>
+    
+    <details class="turn card anim">
+      <summary class="turn_head">
+        <div class="turn_title">الدور 3</div>
+        <div class="turn_meta">🕒 21 Feb 2026 — 11:33 UTC</div>
+      </summary>
+
+      <div class="section">
+        <div class="label">💬 إدخال المستخدم</div>
+        <pre>الدليل اللي معايا ضد الفكرة دي: قبل كده فهمت كورسات وخلصت مشاريع صغيرة.</pre>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">📌 تلخيص</div>
+          <pre>الدليل اللي معايا ضد الفكرة دي: قبل كده فهمت كورسات وخلصت مشاريع صغيرة.</pre>
+        </div>
+
+        <div class="mini">
+          <div class="label">🧠 الفكرة التلقائية</div>
+          <pre>قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).</pre>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">⚠️ تشوهات معرفية</div>
+          <p class="muted">—</p>
+          <div class="divider"></div>
+          <div class="label">❤️ مشاعر</div>
+          <span class="badge">sadness (0.00)</span><span class="badge">anxiety (0.00)</span><span class="badge">anger (0.00)</span><span class="badge">stress (0.00)</span>
+        </div>
+
+        <div class="mini">
+          <div class="label">❓ أسئلة سوكراتية</div>
+          <ul><li>ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟</li><li>لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟</li><li>هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟</li></ul>
+          <div class="divider"></div>
+          <div class="label">🚀 خطوة عملية</div>
+          <pre>اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.</pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="label">🟣 رد Viola</div>
+        <pre>🟣 Viola (CBT دعم ذاتي)
+
+**تلخيص سريع:**
+- الدليل اللي معايا ضد الفكرة دي: قبل كده فهمت كورسات وخلصت مشاريع صغيرة.
+
+**الفكرة التلقائية المحتملة:**
+- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).
+
+**تشوهات معرفية محتملة (مؤشرات):**
+- غير محدد (محتاج تفاصيل أكثر)
+
+**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**
+- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟
+- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟
+- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟
+
+**خطوة عملية صغيرة الآن:**
+- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.
+
+⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care.</pre>
+      </div>
+    </details>
+    
+    <details class="turn card anim">
+      <summary class="turn_head">
+        <div class="turn_title">الدور 2</div>
+        <div class="turn_meta">🕒 21 Feb 2026 — 11:33 UTC</div>
+      </summary>
+
+      <div class="section">
+        <div class="label">💬 إدخال المستخدم</div>
+        <pre>الفكرة اللي بتكرر في دماغي: أنا غبي ومش هفهم.</pre>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">📌 تلخيص</div>
+          <pre>الفكرة اللي بتكرر في دماغي: أنا غبي ومش هفهم.</pre>
+        </div>
+
+        <div class="mini">
+          <div class="label">🧠 الفكرة التلقائية</div>
+          <pre>قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).</pre>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">⚠️ تشوهات معرفية</div>
+          <p class="muted">—</p>
+          <div class="divider"></div>
+          <div class="label">❤️ مشاعر</div>
+          <span class="badge">sadness (0.00)</span><span class="badge">anxiety (0.00)</span><span class="badge">anger (0.00)</span><span class="badge">stress (0.00)</span>
+        </div>
+
+        <div class="mini">
+          <div class="label">❓ أسئلة سوكراتية</div>
+          <ul><li>ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟</li><li>لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟</li><li>هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟</li></ul>
+          <div class="divider"></div>
+          <div class="label">🚀 خطوة عملية</div>
+          <pre>اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.</pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="label">🟣 رد Viola</div>
+        <pre>🟣 Viola (CBT دعم ذاتي)
+
+**تلخيص سريع:**
+- الفكرة اللي بتكرر في دماغي: أنا غبي ومش هفهم.
+
+**الفكرة التلقائية المحتملة:**
+- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).
+
+**تشوهات معرفية محتملة (مؤشرات):**
+- غير محدد (محتاج تفاصيل أكثر)
+
+**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**
+- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟
+- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟
+- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟
+
+**خطوة عملية صغيرة الآن:**
+- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.
+
+⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care.</pre>
+      </div>
+    </details>
+    
+    <details class="turn card anim">
+      <summary class="turn_head">
+        <div class="turn_title">الدور 1</div>
+        <div class="turn_meta">🕒 21 Feb 2026 — 11:33 UTC</div>
+      </summary>
+
+      <div class="section">
+        <div class="label">💬 إدخال المستخدم</div>
+        <pre>أنا متوتر ومش عارف أبدأ مذاكرة، حاسس إني هفشل.</pre>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">📌 تلخيص</div>
+          <pre>أنا متوتر ومش عارف أبدأ مذاكرة، حاسس إني هفشل.</pre>
+        </div>
+
+        <div class="mini">
+          <div class="label">🧠 الفكرة التلقائية</div>
+          <pre>قد تكون الفكرة التلقائية: «هفشل»</pre>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">⚠️ تشوهات معرفية</div>
+          <p class="muted">—</p>
+          <div class="divider"></div>
+          <div class="label">❤️ مشاعر</div>
+          <span class="badge">sadness (0.00)</span><span class="badge">anxiety (0.20)</span><span class="badge">anger (0.00)</span><span class="badge">stress (0.00)</span>
+        </div>
+
+        <div class="mini">
+          <div class="label">❓ أسئلة سوكراتية</div>
+          <ul><li>ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟</li><li>لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟</li><li>هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟</li></ul>
+          <div class="divider"></div>
+          <div class="label">🚀 خطوة عملية</div>
+          <pre>اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.</pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="label">🟣 رد Viola</div>
+        <pre>🟣 Viola (CBT دعم ذاتي)
+
+**تلخيص سريع:**
+- أنا متوتر ومش عارف أبدأ مذاكرة، حاسس إني هفشل.
+
+**الفكرة التلقائية المحتملة:**
+- قد تكون الفكرة التلقائية: «هفشل»
+
+**تشوهات معرفية محتملة (مؤشرات):**
+- غير محدد (محتاج تفاصيل أكثر)
+
+**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**
+- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟
+- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟
+- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟
+
+**خطوة عملية صغيرة الآن:**
+- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.
+
+⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care.</pre>
+      </div>
+    </details>
+    
+
+  <div class="card muted">
+    <span class="pill">⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care.</span>
+  </div>
+</div>
+</body>
+</html>

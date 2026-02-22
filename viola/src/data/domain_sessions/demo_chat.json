@@ -1,0 +1,865 @@
+{
+  "session_id": "demo_chat",
+  "created_at": "2026-02-21T11:53:11.481171+00:00",
+  "updated_at": "2026-02-21T11:53:11.483043+00:00",
+  "turns": [
+    {
+      "turn_id": "turn_1edf0473602c",
+      "created_at": "2026-02-21T11:53:11.481204+00:00",
+      "user_text": "ثىي/",
+      "analysis": {
+        "summary": "ثىي/",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- ثىي/\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_9e88d9b8194c",
+      "created_at": "2026-02-21T11:53:11.481248+00:00",
+      "user_text": "ثىي\\",
+      "analysis": {
+        "summary": "ثىي\\",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- ثىي\\\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_ae1f077a3479",
+      "created_at": "2026-02-21T11:53:11.481268+00:00",
+      "user_text": "ثىي/",
+      "analysis": {
+        "summary": "ثىي/",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- ثىي/\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_74914506493a",
+      "created_at": "2026-02-21T11:53:11.481287+00:00",
+      "user_text": "New-Item -Force -ItemType Directory .\\viola\\adapters\\io | Out-Null",
+      "analysis": {
+        "summary": "New-Item -Force -ItemType Directory .\\viola\\adapters\\io | Out-Null",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- New-Item -Force -ItemType Directory .\\viola\\adapters\\io | Out-Null\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_da375e3a7768",
+      "created_at": "2026-02-21T11:53:11.481304+00:00",
+      "user_text": "@'",
+      "analysis": {
+        "summary": "@'",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- @'\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_2b4981ade83c",
+      "created_at": "2026-02-21T11:53:11.481323+00:00",
+      "user_text": "from __future__ import annotations",
+      "analysis": {
+        "summary": "from __future__ import annotations",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- from __future__ import annotations\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_f90537a91f7f",
+      "created_at": "2026-02-21T11:53:11.481340+00:00",
+      "user_text": "import json",
+      "analysis": {
+        "summary": "import json",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- import json\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_3d3b3fb6be8d",
+      "created_at": "2026-02-21T11:53:11.481356+00:00",
+      "user_text": "import os",
+      "analysis": {
+        "summary": "import os",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- import os\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_97c7ab8a3679",
+      "created_at": "2026-02-21T11:53:11.481372+00:00",
+      "user_text": "import threading",
+      "analysis": {
+        "summary": "import threading",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- import threading\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_6fe0ba42992c",
+      "created_at": "2026-02-21T11:53:11.481388+00:00",
+      "user_text": "import webbrowser",
+      "analysis": {
+        "summary": "import webbrowser",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- import webbrowser\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_e075e7826d11",
+      "created_at": "2026-02-21T11:53:11.481404+00:00",
+      "user_text": "from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer",
+      "analysis": {
+        "summary": "from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_4a04a758a17d",
+      "created_at": "2026-02-21T11:53:11.481421+00:00",
+      "user_text": "from typing import Any, Dict, Optional",
+      "analysis": {
+        "summary": "from typing import Any, Dict, Optional",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- from typing import Any, Dict, Optional\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_b8f3a829b333",
+      "created_at": "2026-02-21T11:53:11.481437+00:00",
+      "user_text": "from urllib.parse import urlparse",
+      "analysis": {
+        "summary": "from urllib.parse import urlparse",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- from urllib.parse import urlparse\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_7c1c767b22fb",
+      "created_at": "2026-02-21T11:53:11.481454+00:00",
+      "user_text": "from viola.services.session_summary import build_session_summary",
+      "analysis": {
+        "summary": "from viola.services.session_summary import build_session_summary",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- from viola.services.session_summary import build_session_summary\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_9fc9a72fd328",
+      "created_at": "2026-02-21T11:53:11.481470+00:00",
+      "user_text": "def _domain_path(session_id: str) -> str:",
+      "analysis": {
+        "summary": "def _domain_path(session_id: str) -> str:",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- def _domain_path(session_id: str) -> str:\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_c6f139fbbf5f",
+      "created_at": "2026-02-21T11:53:11.481486+00:00",
+      "user_text": "return os.path.join(\"data\", \"domain_sessions\", f\"{session_id}.json\")",
+      "analysis": {
+        "summary": "return os.path.join(\"data\", \"domain_sessions\", f\"{session_id}.json\")",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- return os.path.join(\"data\", \"domain_sessions\", f\"{session_id}.json\")\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_d4baa83cbb5b",
+      "created_at": "2026-02-21T11:53:11.481503+00:00",
+      "user_text": "def _read_json(path: str) -> Dict[str, Any]:",
+      "analysis": {
+        "summary": "def _read_json(path: str) -> Dict[str, Any]:",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- def _read_json(path: str) -> Dict[str, Any]:\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_cf21a0685590",
+      "created_at": "2026-02-21T11:53:11.481519+00:00",
+      "user_text": "with open(path, \"r\", encoding=\"utf-8\") as f:",
+      "analysis": {
+        "summary": "with open(path, \"r\", encoding=\"utf-8\") as f:",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- with open(path, \"r\", encoding=\"utf-8\") as f:\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_c6c2d428df3a",
+      "created_at": "2026-02-21T11:53:11.481534+00:00",
+      "user_text": "return json.load(f)",
+      "analysis": {
+        "summary": "return json.load(f)",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- return json.load(f)\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_6de389faaaca",
+      "created_at": "2026-02-21T11:53:11.481550+00:00",
+      "user_text": "def _write_json(path: str, data: Dict[str, Any]) -> None:",
+      "analysis": {
+        "summary": "def _write_json(path: str, data: Dict[str, Any]) -> None:",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- def _write_json(path: str, data: Dict[str, Any]) -> None:\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_4da82e44cb61",
+      "created_at": "2026-02-21T11:53:11.481566+00:00",
+      "user_text": "os.makedirs(os.path.dirname(path), exist_ok=True)",
+      "analysis": {
+        "summary": "os.makedirs(os.path.dirname(path), exist_ok=True)",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- os.makedirs(os.path.dirname(path), exist_ok=True)\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_059c3a448785",
+      "created_at": "2026-02-21T11:53:11.481582+00:00",
+      "user_text": "with open(path, \"w\", encoding=\"utf-8\") as f:",
+      "analysis": {
+        "summary": "with open(path, \"w\", encoding=\"utf-8\") as f:",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- with open(path, \"w\", encoding=\"utf-8\") as f:\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_87e24d5779e7",
+      "created_at": "2026-02-21T11:53:11.481598+00:00",
+      "user_text": "json.dump(data, f, ensure_ascii=False, indent=2)",
+      "analysis": {
+        "summary": "json.dump(data, f, ensure_ascii=False, indent=2)",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- json.dump(data, f, ensure_ascii=False, indent=2)\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_b4c865227cc4",
+      "created_at": "2026-02-21T11:53:11.481614+00:00",
+      "user_text": "def _json_response(handler: BaseHTTPRequestHandler, status: int, payload: Dict[str, Any]) -> None:",
+      "analysis": {
+        "summary": "def _json_response(handler: BaseHTTPRequestHandler, status: int, payload: Dict[str, Any]) -> None:",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- def _json_response(handler: BaseHTTPRequestHandler, status: int, payload: Dict[str, Any]) -> None:\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_451b0bcc5fd7",
+      "created_at": "2026-02-21T11:53:11.481635+00:00",
+      "user_text": "body = json.dumps(payload, ensure_ascii=False).encode(\"utf-8\")",
+      "analysis": {
+        "summary": "body = json.dumps(payload, ensure_ascii=False).encode(\"utf-8\")",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- body = json.dumps(payload, ensure_ascii=False).encode(\"utf-8\")\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_862ebd37a05f",
+      "created_at": "2026-02-21T11:53:11.481651+00:00",
+      "user_text": "handler.send_response(status)",
+      "analysis": {
+        "summary": "handler.send_response(status)",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- handler.send_response(status)\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_2b68b4adaabc",
+      "created_at": "2026-02-21T11:53:11.481667+00:00",
+      "user_text": "handler.send_header(\"Content-Type\", \"application/json; charset=utf-8\")",
+      "analysis": {
+        "summary": "handler.send_header(\"Content-Type\", \"application/json; charset=utf-8\")",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- handler.send_header(\"Content-Type\", \"application/json; charset=utf-8\")\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_fe7341b65e03",
+      "created_at": "2026-02-21T11:53:11.481683+00:00",
+      "user_text": "handler.send_header(\"Content-Length\", str(len(body)))",
+      "analysis": {
+        "summary": "handler.send_header(\"Content-Length\", str(len(body)))",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- handler.send_header(\"Content-Length\", str(len(body)))\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_8a87f32e61aa",
+      "created_at": "2026-02-21T11:53:11.481699+00:00",
+      "user_text": "handler.end_headers()",
+      "analysis": {
+        "summary": "handler.end_headers()",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- handler.end_headers()\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_3ee6e30ce3ba",
+      "created_at": "2026-02-21T11:53:11.481715+00:00",
+      "user_text": "handler.wfile.write(body)",
+      "analysis": {
+        "summary": "handler.wfile.write(body)",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- handler.wfile.write(body)\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_2d08363b53be",
+      "created_at": "2026-02-21T11:53:11.481731+00:00",
+      "user_text": "def _html_response(handler: BaseHTTPRequestHandler, html_doc: str) -> None:",
+      "analysis": {
+        "summary": "def _html_response(handler: BaseHTTPRequestHandler, html_doc: str) -> None:",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- def _html_response(handler: BaseHTTPRequestHandler, html_doc: str) -> None:\n\n**الفكرة التلقائية المحتملة:**\n- قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟\n- لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟\n- هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟\n\n**خطوة عملية صغيرة الآن:**\n- اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    },
+    {
+      "turn_id": "turn_25d010480774",
+      "created_at": "2026-02-21T11:53:11.481747+00:00",
+      "user_text": "body = html_doc.encode(\"utf-8\")",
+      "analysis": {
+        "summary": "body = html_doc.encode(\"utf-8\")",
+        "automatic_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+        "cognitive_distortions": [],
+        "emotions": {
+          "sadness": 0.0,
+          "anxiety": 0.0,
+          "anger": 0.0,
+          "stress": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+          "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+          "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+        ],
+        "small_step"

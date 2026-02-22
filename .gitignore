@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# Release bundles
+release/
+
+# OS
+Thumbs.db
+.DS_Store

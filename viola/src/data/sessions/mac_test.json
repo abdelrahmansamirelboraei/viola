@@ -1,0 +1,33 @@
+{
+  "session_id": "mac_test",
+  "input_type": "text",
+  "language": "ar",
+  "audio_path": null,
+  "raw_text": "انا مرهق",
+  "transcript": null,
+  "analysis": {
+    "emotion_scores": {
+      "قلق": 0.0,
+      "حزن": 0.0,
+      "غضب": 0.0,
+      "ذنب": 0.0,
+      "إرهاق": 0.25
+    },
+    "distortions": [],
+    "summary": "انا مرهق",
+    "auto_thought": "انا مرهق"
+  },
+  "cbt": {
+    "summary": "واضح إن في حمل نفسي عليك دلوقتي.\n- انا مرهق",
+    "auto_thought": "انا مرهق",
+    "distortions": [
+      "غير محدد (محتاج تفاصيل أكثر)"
+    ],
+    "socratic_questions": [
+      "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+      "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟"
+    ],
+    "behavioral_step": "خلال 5 دقائق: نفس عميق 4-7-8 مرتين + بعدها اكتب جملة (فكرة متوازنة) بديلة. — كلمات محورية عندك: مرهق"
+  },
+  "disclaimer": "Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+}

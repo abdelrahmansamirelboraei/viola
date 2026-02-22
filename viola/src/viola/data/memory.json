@@ -1,0 +1,709 @@
+{
+  "version": 1,
+  "created_at": "2026-02-22T12:28:06.265244+00:00",
+  "users": {
+    "abdulrahman": {
+      "created_at": "2026-02-22T12:28:06.313041+00:00",
+      "events": [
+        {
+          "ts": "2026-02-22T12:28:06.383475+00:00",
+          "mode": "cbt",
+          "text": "انا قلقان ومش قادر أركز وحاسس اني دايمًا هفشل",
+          "severity": 18,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايمًا"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:28:06.457043+00:00",
+          "mode": "cbt",
+          "text": "حاسس اني فاشل وانا السبب",
+          "severity": 10,
+          "top_emotion": null,
+          "emotions": [],
+          "distortions": [],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:28:46.909612+00:00",
+          "mode": "cbt",
+          "text": "انا قلقان ومش قادر أركز وحاسس اني دايمًا هفشل",
+          "severity": 18,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايمًا"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:28:46.982805+00:00",
+          "mode": "cbt",
+          "text": "حاسس اني فاشل وانا السبب",
+          "severity": 10,
+          "top_emotion": null,
+          "emotions": [],
+          "distortions": [],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:32:24.985598+00:00",
+          "mode": "cbt",
+          "text": "انا قلقان ومش قادر أركز وحاسس اني دايمًا هفشل",
+          "severity": 18,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايمًا"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:32:25.455283+00:00",
+          "mode": "crisis",
+          "text": "مش قادر أكمل وحياتي ملهاش لازمة",
+          "severity": 85,
+          "top_emotion": "hopelessness",
+          "emotions": [
+            {
+              "name": "hopelessness",
+              "confidence": 0.2,
+              "signals": [
+                "ملهاش لازمة"
+              ]
+            }
+          ],
+          "distortions": [],
+          "crisis_flag": true
+        },
+        {
+          "ts": "2026-02-22T12:37:42.380814+00:00",
+          "mode": "cbt",
+          "text": "انا قلقان ومش قادر أركز وحاسس اني دايمًا هفشل",
+          "severity": 18,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايمًا"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:37:43.105524+00:00",
+          "mode": "crisis",
+          "text": "مش قادر أكمل وحياتي ملهاش لازمة",
+          "severity": 85,
+          "top_emotion": "hopelessness",
+          "emotions": [
+            {
+              "name": "hopelessness",
+              "confidence": 0.2,
+              "signals": [
+                "ملهاش لازمة"
+              ]
+            }
+          ],
+          "distortions": [],
+          "crisis_flag": true
+        },
+        {
+          "ts": "2026-02-22T12:39:29.449226+00:00",
+          "mode": "cbt",
+          "text": "انا قلقان ومش قادر أركز وحاسس اني دايمًا هفشل",
+          "severity": 18,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايمًا"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:39:30.439994+00:00",
+          "mode": "crisis",
+          "text": "مش قادر أكمل وحياتي ملهاش لازمة",
+          "severity": 85,
+          "top_emotion": "hopelessness",
+          "emotions": [
+            {
+              "name": "hopelessness",
+              "confidence": 0.2,
+              "signals": [
+                "ملهاش لازمة"
+              ]
+            }
+          ],
+          "distortions": [],
+          "crisis_flag": true
+        },
+        {
+          "ts": "2026-02-22T12:42:14.456844+00:00",
+          "mode": "cbt",
+          "text": "انا قلقان ومش قادر أركز وحاسس اني دايمًا هفشل",
+          "severity": 18,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايمًا"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:42:15.086662+00:00",
+          "mode": "cbt",
+          "text": "حاسس اني فاشل وانا السبب",
+          "severity": 10,
+          "top_emotion": null,
+          "emotions": [],
+          "distortions": [],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:42:39.326046+00:00",
+          "mode": "cbt",
+          "text": "...",
+          "severity": 10,
+          "top_emotion": null,
+          "emotions": [],
+          "distortions": [],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:45:28.578995+00:00",
+          "type": "checkin",
+          "mood": 42,
+          "note": "ضغط شغل"
+        },
+        {
+          "ts": "2026-02-22T12:45:48.790415+00:00",
+          "type": "checkin",
+          "mood": 55,
+          "note": "كنت متوتر"
+        },
+        {
+          "ts": "2026-02-22T12:51:07.646564+00:00",
+          "type": "checkin",
+          "mood": 30,
+          "note": "يوم تقيل"
+        },
+        {
+          "ts": "2026-02-22T12:51:08.647273+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "حاسس اني دايمًا بفشل ومش هنجح",
+          "severity": 13,
+          "top_emotion": null,
+          "emotions": [],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايمًا"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:51:09.201205+00:00",
+          "type": "checkin",
+          "mood": 70,
+          "note": "أحسن شوية"
+        },
+        {
+          "ts": "2026-02-22T12:51:09.653090+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "النهارده احسن بس خايف ارجع تاني",
+          "severity": 15,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "خايف"
+              ]
+            }
+          ],
+          "distortions": [],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:52:28.922867+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "إنا قلقان ومش قادر أركز وحاسس إني دايمًا هفشل",
+          "severity": 15,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:52:29.500072+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "مش قادر اكمل وحياتي ملهاش لازمه",
+          "severity": 10,
+          "top_emotion": null,
+          "emotions": [],
+          "distortions": [],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:57:15.760057+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "انا مخنوق ومزنوق ومش قادر اركز",
+          "severity": 20,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "مخنوق"
+              ]
+            },
+            {
+              "name": "sadness",
+              "confidence": 0.2,
+              "signals": [
+                "مخنوق"
+              ]
+            }
+          ],
+          "distortions": [],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:57:16.230000+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "مو مرتاح ابدا واحس انها مصيبه",
+          "severity": 21,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "مو مرتاح"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "catastrophizing",
+              "confidence": 0.2,
+              "signals": [
+                "مصيبه"
+              ]
+            },
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "ابدا"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T12:57:16.757502+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "ما في فايده، كل مره بخربها",
+          "severity": 18,
+          "top_emotion": "hopelessness",
+          "emotions": [
+            {
+              "name": "hopelessness",
+              "confidence": 0.2,
+              "signals": [
+                "ما في فايده"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "كل مره"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        }
+      ],
+      "stats": {
+        "total_messages": 20,
+        "emotion_counts": {
+          "anxiety": 10,
+          "hopelessness": 4,
+          "sadness": 1
+        },
+        "distortion_counts": {
+          "overgeneralization": 9,
+          "catastrophizing": 1
+        },
+        "crisis_count": 3,
+        "avg_severity": 25.75,
+        "last_severity": 18,
+        "last_top_emotion": "hopelessness",
+        "last_updated_at": "2026-02-22T12:57:16.757502+00:00",
+        "checkins_count": 4,
+        "avg_checkin_mood": 49.25,
+        "last_checkin_mood": 70
+      }
+    },
+    "test_user_2": {
+      "created_at": "2026-02-22T13:07:51.163691+00:00",
+      "events": [
+        {
+          "ts": "2026-02-22T13:07:51.145098+00:00",
+          "type": "checkin",
+          "mood": 50,
+          "note": "test note"
+        },
+        {
+          "ts": "2026-02-22T13:08:33.547077+00:00",
+          "type": "checkin",
+          "mood": 50,
+          "note": "test note"
+        },
+        {
+          "ts": "2026-02-22T13:09:54.236889+00:00",
+          "type": "checkin",
+          "mood": 50,
+          "note": "test note"
+        },
+        {
+          "ts": "2026-02-22T13:10:02.219539+00:00",
+          "type": "checkin",
+          "mood": 50,
+          "note": "test note"
+        }
+      ],
+      "stats": {
+        "total_messages": 0,
+        "emotion_counts": {},
+        "distortion_counts": {},
+        "crisis_count": 0,
+        "avg_severity": 0.0,
+        "last_severity": null,
+        "last_top_emotion": null,
+        "last_updated_at": "2026-02-22T13:10:02.219539+00:00",
+        "checkins_count": 4,
+        "avg_checkin_mood": 50.0,
+        "last_checkin_mood": 50
+      }
+    },
+    "test_user": {
+      "created_at": "2026-02-22T13:07:51.330315+00:00",
+      "events": [
+        {
+          "ts": "2026-02-22T13:07:51.325874+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "انا قلقان ومش قادر اركز وحاسس اني دايمًا هفشل",
+          "severity": 18,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايما"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T13:07:51.484209+00:00",
+          "type": "message",
+          "mode": "crisis",
+          "text": "مش قادر اكمل وحياتي ملهاش لازمه",
+          "severity": 85,
+          "top_emotion": "hopelessness",
+          "emotions": [
+            {
+              "name": "hopelessness",
+              "confidence": 0.2,
+              "signals": [
+                "ملهاش لازمه"
+              ]
+            }
+          ],
+          "distortions": [],
+          "crisis_flag": true
+        },
+        {
+          "ts": "2026-02-22T13:08:33.650031+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "انا قلقان ومش قادر اركز وحاسس اني دايمًا هفشل",
+          "severity": 18,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايما"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T13:08:33.767537+00:00",
+          "type": "message",
+          "mode": "crisis",
+          "text": "مش قادر اكمل وحياتي ملهاش لازمه",
+          "severity": 85,
+          "top_emotion": "hopelessness",
+          "emotions": [
+            {
+              "name": "hopelessness",
+              "confidence": 0.2,
+              "signals": [
+                "ملهاش لازمه"
+              ]
+            }
+          ],
+          "distortions": [],
+          "crisis_flag": true
+        },
+        {
+          "ts": "2026-02-22T13:09:54.328297+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "انا قلقان ومش قادر اركز وحاسس اني دايمًا هفشل",
+          "severity": 18,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايما"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T13:09:54.412965+00:00",
+          "type": "message",
+          "mode": "crisis",
+          "text": "مش قادر اكمل وحياتي ملهاش لازمه",
+          "severity": 85,
+          "top_emotion": "hopelessness",
+          "emotions": [
+            {
+              "name": "hopelessness",
+              "confidence": 0.2,
+              "signals": [
+                "ملهاش لازمه"
+              ]
+            }
+          ],
+          "distortions": [],
+          "crisis_flag": true
+        },
+        {
+          "ts": "2026-02-22T13:10:02.311408+00:00",
+          "type": "message",
+          "mode": "cbt",
+          "text": "انا قلقان ومش قادر اركز وحاسس اني دايمًا هفشل",
+          "severity": 18,
+          "top_emotion": "anxiety",
+          "emotions": [
+            {
+              "name": "anxiety",
+              "confidence": 0.2,
+              "signals": [
+                "قلقان"
+              ]
+            }
+          ],
+          "distortions": [
+            {
+              "name": "overgeneralization",
+              "confidence": 0.2,
+              "signals": [
+                "دايما"
+              ]
+            }
+          ],
+          "crisis_flag": false
+        },
+        {
+          "ts": "2026-02-22T13:10:02.422726+00:00",
+          "type": "message",
+          "mode": "crisis",
+          "text": "مش قادر اكمل وحياتي ملهاش لازمه",
+          "severity": 85,
+          "top_emotion": "hopelessness",
+          "emotions": [
+            {
+              "name": "hopelessness",
+              "confidence": 0.2,
+              "signals": [
+                "ملهاش لازمه"
+              ]
+            }
+          ],
+          "distortions": [],
+          "crisis_flag": true
+        }
+      ],
+      "stats": {
+        "total_messages": 8,
+        "emotion_counts": {
+          "anxiety": 4,
+          "hopelessness": 4
+        },
+        "distortion_counts": {
+          "overgeneralization": 4
+        },
+        "crisis_count": 4,
+        "avg_severity": 51.5,
+        "last_severity": 85,
+        "last_top_emotion": "hopelessness",
+        "last_updated_at": "2026-02-22T13:10:02.422726+00:00",
+        "checkins_count": 0,
+        "avg_checkin_mood": 0.0,
+        "last_checkin_mood": null
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "session_id": "6d0caca37f8a4ee195d06d4ebd6da735",
+  "input_type": "text",
+  "language": "ar",
+  "audio_path": null,
+  "raw_text": "انا عايز اسافر",
+  "transcript": null,
+  "analysis": {
+    "emotion_scores": {
+      "قلق": 0.0,
+      "حزن": 0.0,
+      "غضب": 0.0,
+      "ذنب": 0.0,
+      "خجل": 0.0,
+      "إرهاق": 0.0
+    },
+    "distortions": [],
+    "summary": "انا عايز اسافر",
+    "auto_thought": "انا عايز اسافر"
+  },
+  "cbt": {
+    "summary": "خلينا نفهم أكتر اللي بيحصل جواك.",
+    "auto_thought": "انا عايز اسافر",
+    "distortions": [],
+    "socratic_questions": [
+      "إيه أكتر حاجة مضايقاك دلوقتي؟",
+      "إيه اللي خلاك تحس بالشكل ده النهاردة؟"
+    ],
+    "behavioral_step": "خلينا نبدأ بخطوة صغيرة: خُد نفس عميق وبعدين احكيلي أكتر."
+  },
+  "disclaimer": "Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+}

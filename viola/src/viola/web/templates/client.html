@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Farida | Chat</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="bg"></div>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="brand">
+        <div class="badge">Farida — Chat</div>
+      </div>
+
+      <div id="messages" class="chat-box"></div>
+
+      <form id="chatForm" class="row">
+        <input id="messageInput" autocomplete="off" placeholder="اكتب رسالتك هنا..." />
+        <button type="submit">إرسال</button>
+      </form>
+
+      <div class="small">لو حصل خطأ في الإرسال، راجع console أو السيرفر logs.</div>
+    </div>
+  </div>
+
+  <script src="/static/client.js"></script>
+</body>
+</html>
+

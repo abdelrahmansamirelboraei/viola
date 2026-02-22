@@ -1,0 +1,34 @@
+{
+  "session_id": "variety_test",
+  "input_type": "text",
+  "language": "ar",
+  "audio_path": null,
+  "raw_text": "عندي ديدلاين في الشغل ومتوتر ومش عارف أبدأ",
+  "transcript": null,
+  "analysis": {
+    "emotion_scores": {
+      "قلق": 0.5,
+      "حزن": 0.0,
+      "غضب": 0.0,
+      "ذنب": 0.0,
+      "إرهاق": 0.0
+    },
+    "distortions": [],
+    "summary": "عندي ديدلاين في الشغل ومتوتر ومش عارف أبدأ",
+    "auto_thought": "عندي ديدلاين في الشغل ومتوتر ومش عارف أبدأ"
+  },
+  "cbt": {
+    "summary": "من اللي كتبته، فيه توتر محتاج يتفك خطوة خطوة.\n- عندي ديدلاين في الشغل ومتوتر ومش عارف أبدأ | المجال: anxiety",
+    "auto_thought": "عندي ديدلاين في الشغل ومتوتر ومش عارف أبدأ",
+    "distortions": [
+      "غير محدد (محتاج تفاصيل أكثر)"
+    ],
+    "socratic_questions": [
+      "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+      "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+      "إيه سيناريو متوسط (واقعي) ممكن يحصل بدل الكارثة؟"
+    ],
+    "behavioral_step": "خلال 10 دقائق: اكتب 3 نقاط صغيرة تقدر تعملهم النهاردة، وابدأ بالأصغر. — كلمات محورية عندك: عندي, ديدلاين, الشغل, ومتوتر"
+  },
+  "disclaimer": "Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+}

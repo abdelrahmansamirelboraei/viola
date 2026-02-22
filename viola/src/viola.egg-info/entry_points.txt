@@ -1,0 +1,2 @@
+[console_scripts]
+viola = viola.__main__:main

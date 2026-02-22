@@ -1,0 +1,33 @@
+{
+  "session_id": "20260221_100838",
+  "input_type": "text",
+  "language": "ar",
+  "audio_path": null,
+  "raw_text": "test",
+  "transcript": null,
+  "analysis": {
+    "emotion_scores": {
+      "sadness": 0.0,
+      "anxiety": 0.0,
+      "anger": 0.0,
+      "stress": 0.0
+    },
+    "distortions": [],
+    "summary": "test",
+    "auto_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر)."
+  },
+  "cbt": {
+    "summary": "test",
+    "auto_thought": "قد تكون الفكرة التلقائية مرتبطة بالخوف أو عدم القدرة (محتاج تفاصيل أكثر).",
+    "distortions": [
+      "غير محدد (محتاج تفاصيل أكثر)"
+    ],
+    "socratic_questions": [
+      "ما الدليل الحقيقي المؤيد للفكرة؟ وما الدليل ضدها؟",
+      "لو صديقك قال لك نفس الكلام، هترد عليه بإيه؟",
+      "هل في تفسير بديل أقل قسوة/أكثر توازنًا للموقف؟"
+    ],
+    "behavioral_step": "اختار خطوة صغيرة جدًا خلال 10 دقائق: اكتب 3 نقاط تقدر تعملهم اليوم حتى لو بسيطين، وابدأ بالأصغر."
+  },
+  "disclaimer": "Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+}

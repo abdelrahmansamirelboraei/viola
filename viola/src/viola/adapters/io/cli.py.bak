@@ -1,0 +1,65 @@
+from __future__ import annotations
+
+import json
+from typing import Any, Dict
+
+from viola.router import process_text
+
+
+# NOTE: Some Windows consoles render Arabic RTL oddly. Adding RLM (U+200F) can help.
+_RLM = "\u200F"
+
+
+def _rtl_lines(s: str) -> str:
+    # Wrap each line with an RLM prefix to hint RTL direction in terminals that support it.
+    return "\n".join([_RLM + line for line in s.splitlines()])
+
+
+def run_cli(text: str, user_id: str = "default", as_json: bool = True) -> int:
+    payload: Dict[str, Any] = process_text(text, user_id=user_id)
+
+    if as_json:
+        out = json.dumps(payload, ensure_ascii=False, indent=2)
+        print(_rtl_lines(out))
+        return 0
+
+    # Human-friendly output (minimal)
+    mode = payload.get("mode")
+    analysis = payload.get("analysis", {})
+    summary = payload.get("memory_summary", {})
+
+    lines = []
+    lines.append(f"mode: {mode}")
+    lines.append(f"severity: {analysis.get('severity')}")
+    top_emotions = analysis.get("emotions") or []
+    if top_emotions:
+        lines.append(f"top_emotion: {top_emotions[0].get('name')} ({top_emotions[0].get('confidence')})")
+
+    if mode == "crisis":
+        resp = payload.get("response", {})
+        lines.append("")
+        lines.append("CRISIS RESPONSE:")
+        lines.append(resp.get("message", ""))
+        for s in resp.get("steps_now", []):
+            lines.append(f"- {s}")
+        for s in resp.get("seek_help", []):
+            lines.append(f"- {s}")
+    else:
+        plan = payload.get("plan", {})
+        lines.append("")
+        lines.append("CBT PLAN:")
+        for itv in plan.get("interventions", []):
+            lines.append(f"* distortion: {itv.get('distortion')} (conf={itv.get('confidence')})")
+            for q in itv.get("questions", []):
+                lines.append(f"  ? {q}")
+            for r in itv.get("reframes", []):
+                lines.append(f"  ↻ {r}")
+            for e in itv.get("exercises", []):
+                lines.append(f"  ✓ {e}")
+
+    lines.append("")
+    lines.append("MEMORY SUMMARY:")
+    lines.append(json.dumps(summary, ensure_ascii=False, indent=2))
+
+    print(_rtl_lines("\n".join(lines)))
+    return 0

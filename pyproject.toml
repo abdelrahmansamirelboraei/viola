@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "viola"
+version = "0.1.1"
+description = "Viola: Arabic CBT assistant"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+viola = "viola.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "viola/src"}
+
+[tool.setuptools.packages.find]
+where = ["viola/src"]
+

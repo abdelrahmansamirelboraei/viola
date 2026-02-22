@@ -1,0 +1,32 @@
+{
+  "session_id": "20260222_011705",
+  "input_type": "text",
+  "language": "ar",
+  "audio_path": null,
+  "raw_text": "انا عايز انتحر",
+  "transcript": null,
+  "analysis": {
+    "emotion_scores": {
+      "قلق": 0.0,
+      "حزن": 0.0,
+      "غضب": 0.0,
+      "ذنب": 0.0,
+      "خجل": 0.0,
+      "إرهاق": 0.0
+    },
+    "distortions": [],
+    "summary": "انا عايز انتحر",
+    "auto_thought": "انا عايز انتحر"
+  },
+  "cbt": {
+    "summary": "🚨 محتاج أتعامل مع كلامك بجدية شديدة.",
+    "auto_thought": "ذكرت أفكار عن إيذاء النفس.",
+    "distortions": [],
+    "socratic_questions": [
+      "هل أنت في خطر فوري الآن؟",
+      "هل في شخص قريب منك تقدر تتواصل معاه فورًا؟"
+    ],
+    "behavioral_step": "من فضلك تواصل فورًا مع جهة طوارئ في بلدك.\nلو في مصر: 122 (شرطة) أو 123 (إسعاف).\nلو في بلد تانية: اتصل برقم الطوارئ المحلي حالًا.\n\nلو تقدر، ابعد عن أي شيء ممكن يسبب أذى، وتواصل مع شخص تثق فيه الآن."
+  },
+  "disclaimer": "Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+}

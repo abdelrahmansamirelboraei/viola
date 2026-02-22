@@ -1,0 +1,41 @@
+{
+  "session_id": "20260222_015918",
+  "created_at": "2026-02-22T01:59:18.481098+00:00",
+  "updated_at": "2026-02-22T01:59:18.481144+00:00",
+  "turns": [
+    {
+      "turn_id": "turn_5281ea7c32cf",
+      "created_at": "2026-02-22T01:59:18.481144+00:00",
+      "user_text": "...",
+      "analysis": {
+        "summary": "...",
+        "automatic_thought": "...",
+        "cognitive_distortions": [],
+        "emotions": {
+          "قلق": 0.0,
+          "حزن": 0.0,
+          "غضب": 0.0,
+          "ذنب": 0.0,
+          "خجل": 0.0,
+          "إرهاق": 0.0
+        },
+        "indicators": {}
+      },
+      "plan": {
+        "socratic_questions": [
+          "إيه أكتر حاجة مضايقاك دلوقتي؟",
+          "إيه اللي خلاك تحس بالشكل ده النهاردة؟"
+        ],
+        "small_step": "خلينا نبدأ بخطوة صغيرة: خُد نفس عميق وبعدين احكيلي أكتر.",
+        "coping_statement": null
+      },
+      "assistant_text": "🟣 Viola (CBT دعم ذاتي)\n\n**تلخيص سريع:**\n- خلينا نفهم أكتر اللي بيحصل جواك.\n\n**الفكرة التلقائية المحتملة:**\n- ...\n\n**تشوهات معرفية محتملة (مؤشرات):**\n- غير محدد (محتاج تفاصيل أكثر)\n\n**أسئلة سوكراتية تساعدك تعيد صياغة الفكرة:**\n- إيه أكتر حاجة مضايقاك دلوقتي؟\n- إيه اللي خلاك تحس بالشكل ده النهاردة؟\n\n**خطوة عملية صغيرة الآن:**\n- خلينا نبدأ بخطوة صغيرة: خُد نفس عميق وبعدين احكيلي أكتر.\n\n⚠️ Viola provides CBT-style self-help guidance and emotional indicators. It is not a medical diagnosis or a substitute for professional care."
+    }
+  ],
+  "metadata": {
+    "app_version": "0.1.0",
+    "locale": "ar",
+    "source": "cli",
+    "extra": {}
+  }
+}

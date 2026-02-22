@@ -1,0 +1,342 @@
+from __future__ import annotations
+
+import json
+import os
+import threading
+import webbrowser
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from typing import Any, Dict
+from urllib.parse import urlparse
+
+from viola.services.guided_cbt_manager import GuidedCBTManager
+from viola.services.session_summary import build_session_summary
+
+
+def _domain_path(session_id: str) -> str:
+    return os.path.join("data", "domain_sessions", f"{session_id}.json")
+
+
+def _read_json(path: str) -> Dict[str, Any]:
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _write_json(path: str, data: Dict[str, Any]) -> None:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def _json_response(handler: BaseHTTPRequestHandler, status: int, payload: Dict[str, Any]) -> None:
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    handler.send_response(status)
+    handler.send_header("Content-Type", "application/json; charset=utf-8")
+    handler.send_header("Content-Length", str(len(body)))
+    handler.end_headers()
+    handler.wfile.write(body)
+
+
+def _html_response(handler: BaseHTTPRequestHandler, html_doc: str) -> None:
+    body = html_doc.encode("utf-8")
+    handler.send_response(200)
+    handler.send_header("Content-Type", "text/html; charset=utf-8")
+    handler.send_header("Content-Length", str(len(body)))
+    handler.end_headers()
+    handler.wfile.write(body)
+
+
+def start_web_chat(
+    pipeline: Any,
+    session_id: str,
+    host: str = "127.0.0.1",
+    port: int = 8765,
+    guided: bool = False,
+) -> int:
+    domain_path = _domain_path(session_id)
+    manager = GuidedCBTManager(max_depth=10)
+
+    class Handler(BaseHTTPRequestHandler):
+        def log_message(self, format: str, *args: Any) -> None:  # noqa: A003
+            return
+
+        def do_GET(self) -> None:  # noqa: N802
+            path = urlparse(self.path).path
+
+            if path == "/" or path == "/index.html":
+                page = _INDEX_HTML.replace("{{SESSION_ID}}", session_id).replace("{{GUIDED}}", "true" if guided else "false")
+                _html_response(self, page)
+                return
+
+            if path == "/api/session":
+                if os.path.exists(domain_path):
+                    _json_response(self, 200, {"ok": True, "session": _read_json(domain_path), "guided": guided})
+                else:
+                    _json_response(self, 200, {"ok": True, "session": {"session_id": session_id, "turns": []}, "guided": guided})
+                return
+
+            _json_response(self, 404, {"ok": False, "error": "Not found"})
+
+        def do_POST(self) -> None:  # noqa: N802
+            path = urlparse(self.path).path
+            length = int(self.headers.get("Content-Length", "0") or "0")
+            raw = self.rfile.read(length) if length > 0 else b"{}"
+
+            try:
+                payload = json.loads(raw.decode("utf-8"))
+            except Exception:
+                payload = {}
+
+            if path == "/api/message":
+                text = str(payload.get("text", "") or "").strip()
+                if not text:
+                    _json_response(self, 400, {"ok": False, "error": "Empty text"})
+                    return
+
+                # Run normal turn through pipeline (saves turn in domain_session)
+                output, saved = pipeline.run_text(text, session_id=session_id)
+
+                followup = ""
+                if guided and os.path.exists(domain_path):
+                    d = _read_json(domain_path)
+                    followup, d2 = manager.next_question(d)
+                    _write_json(domain_path, d2)
+
+                turns_count = 0
+                if os.path.exists(domain_path):
+                    turns_count = len(_read_json(domain_path).get("turns", []))
+
+                assistant_text = output
+                if guided and followup:
+                    assistant_text = (
+                        output
+                        + "\n\n"
+                        + "— — —\n"
+                        + "❓ سؤال متابعة (عشان نوصل لأفضل نتيجة):\n"
+                        + followup
+                    )
+
+                _json_response(
+                    self,
+                    200,
+                    {
+                        "ok": True,
+                        "assistant": assistant_text,
+                        "saved_report": saved,
+                        "domain_path": domain_path,
+                        "turns": turns_count,
+                        "followup": followup,
+                        "guided": guided,
+                    },
+                )
+                return
+
+            if path == "/api/end":
+                if not os.path.exists(domain_path):
+                    _json_response(self, 400, {"ok": False, "error": "Domain session not found"})
+                    return
+
+                d = _read_json(domain_path)
+                summary_text, closing = build_session_summary(d)
+                d["session_summary"] = summary_text
+                d["closing_message"] = closing
+                _write_json(domain_path, d)
+
+                _json_response(self, 200, {"ok": True, "summary": summary_text, "closing": closing})
+                return
+
+            _json_response(self, 404, {"ok": False, "error": "Not found"})
+
+    server = ThreadingHTTPServer((host, port), Handler)
+
+    url = f"http://{host}:{port}/"
+    print(f"🟣 Viola Web Chat running: {url}")
+    print(f"Session ID: {session_id} | guided={guided}")
+    print("Stop: Ctrl+C\n")
+
+    threading.Timer(0.4, lambda: webbrowser.open(url)).start()
+
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        server.server_close()
+
+    return 0
+
+
+_INDEX_HTML = r"""<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viola Web Chat — {{SESSION_ID}}</title>
+  <style>
+    :root{
+      --bg:#0b0b10; --card:rgba(255,255,255,.05); --border:rgba(255,255,255,.12);
+      --text:#f2f2f2; --muted:rgba(242,242,242,.70); --accent:#a855f7;
+    }
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Tahoma,Arial;line-height:1.85;}
+    .wrap{max-width:980px;margin:0 auto;padding:18px;}
+    .top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:14px;}
+    .h1{font-size:20px;font-weight:900;}
+    .meta{color:var(--muted);font-size:13px;direction:ltr;text-align:left;}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px 0;align-items:center;}
+    button{
+      background:rgba(168,85,247,.16);border:1px solid var(--border);color:var(--text);
+      border-radius:12px;padding:10px 12px;cursor:pointer;font-weight:700;
+    }
+    button:hover{filter:brightness(1.1);}
+    .pill{padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.06);font-size:13px}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px;}
+    .msg{padding:12px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04);}
+    .msg .who{font-weight:900;margin-bottom:6px;color:var(--muted);font-size:13px;}
+    pre{white-space:pre-wrap;margin:0;font-family:inherit;}
+    .composer{position:sticky;bottom:0;background:linear-gradient(transparent, rgba(11,11,16,.92) 25%, rgba(11,11,16,1));padding-top:14px;}
+    .row{display:flex;gap:10px;align-items:stretch;}
+    textarea{
+      width:100%;min-height:46px;max-height:160px;resize:vertical;
+      border-radius:14px;border:1px solid var(--border);
+      background:rgba(0,0,0,.25);color:var(--text);padding:12px;font-size:15px;
+      outline:none;
+    }
+    .send{min-width:120px}
+    .muted{color:var(--muted)}
+    .toast{margin-top:10px;color:var(--muted);font-size:13px;direction:ltr;text-align:left}
+    .divider{height:1px;background:var(--border);margin:12px 0;}
+    .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);padding:18px;}
+    .modal .inner{max-width:980px;margin:0 auto;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="h1">Viola Web Chat — <span class="muted">{{SESSION_ID}}</span></div>
+      <div class="meta" id="meta"></div>
+    </div>
+
+    <div class="toolbar">
+      <button id="btnRefresh">Refresh</button>
+      <button id="btnEnd">End Session + Summary</button>
+      <span class="pill" id="guidedPill"></span>
+      <span class="muted" id="status"></span>
+    </div>
+
+    <div class="grid" id="chat"></div>
+
+    <div class="composer">
+      <div class="divider"></div>
+      <div class="row">
+        <textarea id="input" placeholder="اكتب رسالتك هنا... (Enter للإرسال، Shift+Enter لسطر جديد)"></textarea>
+        <button class="send" id="btnSend">Send</button>
+      </div>
+      <div class="toast" id="toast"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="inner msg">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+        <div style="font-weight:900">ملخص الجلسة</div>
+        <button id="btnClose">Close</button>
+      </div>
+      <div class="divider"></div>
+      <pre id="summaryText"></pre>
+      <div class="divider"></div>
+      <pre id="closingText"></pre>
+    </div>
+  </div>
+
+<script>
+const SID = "{{SESSION_ID}}";
+const GUIDED = ({{GUIDED}} === true);
+const chatEl = document.getElementById("chat");
+const inputEl = document.getElementById("input");
+const statusEl = document.getElementById("status");
+const toastEl = document.getElementById("toast");
+const metaEl = document.getElementById("meta");
+const guidedPill = document.getElementById("guidedPill");
+
+const modal = document.getElementById("modal");
+const summaryText = document.getElementById("summaryText");
+const closingText = document.getElementById("closingText");
+
+guidedPill.textContent = GUIDED ? "Guided: ON" : "Guided: OFF";
+
+function msgCard(who, text){
+  const d = document.createElement("div");
+  d.className = "msg";
+  d.innerHTML = `<div class="who">${who}</div><pre></pre>`;
+  d.querySelector("pre").textContent = text || "";
+  return d;
+}
+
+function setToast(t){ toastEl.textContent = t || ""; }
+
+async function loadSession(){
+  statusEl.textContent = "Loading...";
+  const r = await fetch("/api/session");
+  const j = await r.json();
+  statusEl.textContent = j.ok ? "" : ("Error: " + (j.error||""));
+  const s = j.session || {turns:[]};
+  const turns = s.turns || [];
+  metaEl.innerHTML = `Turns: ${turns.length}<br>Session: ${SID}`;
+  chatEl.innerHTML = "";
+  turns.forEach((t, i) => {
+    chatEl.appendChild(msgCard(`أنت (Turn ${i+1})`, t.user_text || ""));
+    chatEl.appendChild(msgCard("Viola", t.assistant_text || ""));
+  });
+  window.scrollTo({top: document.body.scrollHeight, behavior:"smooth"});
+}
+
+async function sendMessage(){
+  const text = (inputEl.value || "").trim();
+  if(!text) return;
+  inputEl.value = "";
+  setToast("");
+  statusEl.textContent = "Thinking...";
+  try{
+    const r = await fetch("/api/message", {
+      method:"POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({text})
+    });
+    const j = await r.json();
+    if(!j.ok){ statusEl.textContent = "Error"; setToast(j.error||""); return; }
+    statusEl.textContent = "";
+    await loadSession();
+    setToast(`Saved: ${j.domain_path} | turns=${j.turns}` + (j.followup ? " | followup=YES" : ""));
+  }catch(e){
+    statusEl.textContent = "Error";
+    setToast(String(e));
+  }
+}
+
+async function endSession(){
+  statusEl.textContent = "Finalizing...";
+  const r = await fetch("/api/end", {method:"POST"});
+  const j = await r.json();
+  statusEl.textContent = "";
+  if(!j.ok){ setToast(j.error||""); return; }
+  summaryText.textContent = j.summary || "";
+  closingText.textContent = j.closing || "";
+  modal.style.display = "block";
+}
+
+document.getElementById("btnSend").addEventListener("click", sendMessage);
+document.getElementById("btnRefresh").addEventListener("click", loadSession);
+document.getElementById("btnEnd").addEventListener("click", endSession);
+document.getElementById("btnClose").addEventListener("click", ()=> modal.style.display="none");
+
+inputEl.addEventListener("keydown", (e)=>{
+  if(e.key === "Enter" && !e.shiftKey){
+    e.preventDefault();
+    sendMessage();
+  }
+});
+
+loadSession();
+</script>
+</body>
+</html>
+"""

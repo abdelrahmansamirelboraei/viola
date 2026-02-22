@@ -1,0 +1,28 @@
+from __future__ import annotations
+
+import argparse
+import sys
+
+from viola.adapters.io.cli import run_cli
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(prog="viola", description="Viola: Arabic CBT assistant (CLI)")
+    parser.add_argument("--text", "-t", type=str, required=True, help="Input text (Arabic supported)")
+    parser.add_argument("--user", "-u", type=str, default="default", help="User id for memory store")
+    parser.add_argument("--json", action="store_true", help="Output JSON (default)")
+    parser.add_argument("--plain", action="store_true", help="Output plain text (human-friendly)")
+
+    args = parser.parse_args(argv)
+
+    as_json = True
+    if args.plain:
+        as_json = False
+    if args.json:
+        as_json = True
+
+    return run_cli(text=args.text, user_id=args.user, as_json=as_json)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv[1:]))
