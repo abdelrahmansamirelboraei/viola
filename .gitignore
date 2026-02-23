@@ -24,3 +24,9 @@ Thumbs.db
 /release/
 *.exe
 *.pkg
+# Build/packaging artifacts
+/build/
+/dist/
+/release/
+*.exe
+*.pkg
