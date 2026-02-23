@@ -45,6 +45,18 @@ def create_app() -> Flask:
         static_folder=str(STATIC_DIR),
     )
     app.secret_key = SECRET_KEY
+    # ---- security hardening (auto-added) ----
+    if not SECRET_KEY or SECRET_KEY.strip() == "" or SECRET_KEY == "dev-secret-change-me":
+        raise RuntimeError("VIOLA_SECRET_KEY must be set to a strong value (not default).")
+
+    app.config["SESSION_COOKIE_HTTPONLY"] = True
+    app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
+    app.config["SESSION_COOKIE_SECURE"] = False
+
+    if not (DEV_USER and DEV_PASS and APP_USER and APP_PASS):
+        raise RuntimeError("VIOLA_* credentials must be set (DEV_USER/DEV_PASS/APP_USER/APP_PASS).")
+    # -----------------------------------------
+
 
     pipeline = build_pipeline()
 
@@ -79,6 +91,10 @@ def create_app() -> Flask:
         role = (payload.get("role") or "").strip()
         username = (payload.get("username") or "").strip()
         password = (payload.get("password") or "").strip()
+    # ---- security hardening (auto-added) ----
+    if (username is None) or (password is None) or str(username).strip() == "" or str(password).strip() == "":
+        return jsonify({"ok": False, "error": "username/password required"}), 400
+    # -----------------------------------------
 
         if role not in {"user", "developer"}:
             return jsonify({"ok": False}), 400
@@ -115,6 +131,13 @@ def create_app() -> Flask:
         output, _ = pipeline.run_text(text, session_id=sid)
 
         return jsonify({"ok": True, "response": output})
+
+    
+
+    @app.get("/logout")
+    def logout():
+        session.clear()
+        return redirect(url_for("login"))
 
     return app
 
